@@ -11,7 +11,7 @@ Výsledkem funkce je seznam slovníků obsahující načtené body (podbné úko
 ```python
 from points import read_points
 
-read_points("10,20;20,10")
+print(read_points("10,20;20,10"))
 ```
 
 Výstup: `[{'x': 10.0, 'y': 20.0}, {'x': 20.0, 'y': 10.0}]`
@@ -19,7 +19,7 @@ Výstup: `[{'x': 10.0, 'y': 20.0}, {'x': 20.0, 'y': 10.0}]`
 ```python
 from points import read_points
 
-read_points("10,20_20,10", separator="_")
+print(read_points("10,20_20,10", separator="_"))
 ```
 
 Výstup: `[{'x': 10.0, 'y': 20.0}, {'x': 20.0, 'y': 10.0}]`
@@ -27,7 +27,7 @@ Výstup: `[{'x': 10.0, 'y': 20.0}, {'x': 20.0, 'y': 10.0}]`
 ```python
 from points import read_points
 
-read_points("1.234,0;10,20")
+print(read_points("1.234,0;10,20"))
 ```
 
 Výstup: `[{'x': 1.234, 'y': 0.0}, {'x': 10.0, 'y': 20.0}]`
@@ -35,7 +35,7 @@ Výstup: `[{'x': 1.234, 'y': 0.0}, {'x': 10.0, 'y': 20.0}]`
 ```python
 from points import read_points
 
-read_points("1.234,0*10,20*1.234,0*-10,20", separator="*")
+print(read_points("1.234,0*10,20*1.234,0*-10,20", separator="*"))
 ```
 
 Výstup: `[{'x': 1.234, 'y': 0.0}, {'x': 10.0, 'y': 20.0}, {'x': 1.234, 'y': 0.0}, {'x': -10.0, 'y': 20.0}]`
