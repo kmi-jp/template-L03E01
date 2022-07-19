@@ -7,6 +7,8 @@ Parametr `text` obsahuje vstupní text s body ve formátu `x1,y1;x2,y2;....;xn,y
 
 Výsledkem funkce je seznam slovníků obsahující načtené body (podbné úkolu [L02E01](https://github.com/kmi-jp/template-L02E01), jednotlivé souřadnice však neumocňujeme!). Souřadnice bodů vždy ukládejte jako `float`.
 
+**Nezapomínejte na docstring funkce.**
+
 ## Příklad chování
 ```python
 from points import read_points
@@ -39,3 +41,10 @@ print(read_points("1.234,0*10,20*1.234,0*-10,20", separator="*"))
 ```
 
 Výstup: `[{'x': 1.234, 'y': 0.0}, {'x': 10.0, 'y': 20.0}, {'x': 1.234, 'y': 0.0}, {'x': -10.0, 'y': 20.0}]`
+
+## Lokální testování
+Funkčnost řešení ověříte následujícím příkazem:
+
+```bash
+pytest tests.py
+```
