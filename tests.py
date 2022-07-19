@@ -11,7 +11,10 @@ from points import read_points
     ],
 )
 def test_read_points(test_input, expected):
+    assert read_points(text=test_input, separator=";") == expected
+    assert read_points(text=test_input) == expected
     assert read_points(test_input) == expected
+    assert read_points(test_input, ";") == expected
 
 
 @pytest.mark.parametrize(
@@ -32,3 +35,8 @@ def test_read_points(test_input, expected):
 )
 def test_read_points_custom_separator(test_input, separator, expected):
     assert read_points(test_input, separator) == expected
+    assert read_points(text=test_input, separator=separator) == expected
+
+
+def test_docstrings():
+    assert read_points.__doc__ is not None
