@@ -1,7 +1,7 @@
 # L03E01: Read points
-Vytvořte modul `points.py` obsahující funkci `read_points()`.
+Vytvořte modul `points.py` obsahující funkci `read_points(text, separator=";")`.
 
-Funkce `read_points()` vyžaduje jeden povinný parametr `text` a volitelný parametr `separator` s výchozí hodnotou `;`.
+Funkce `read_points(text, separator=";")` vyžaduje jeden povinný parametr `text` a volitelný parametr `separator` s výchozí hodnotou `;`.
 
 Parametr `text` obsahuje vstupní text s body ve formátu `x1,y1;x2,y2;....;xn,yn`, volitelný parametr `separator` umožňuje měnit oddělovač jednotlivých bodů v parametru `text`. Například pro `separator="_"` bude text ve formátu `x1,y1_x2,y2_...._xn,yn`. Program nemusí fungovat pro `separator=","`, `separator="."` a `separator="-"`.
 
